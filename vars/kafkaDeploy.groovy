@@ -29,7 +29,7 @@ def call(Map args = [:]) {
         sh """
         ansible-playbook \
           ${config.CODE_BASE_PATH}/site.yml \
-          -i ${config.CODE_BASE_PATH}/inventory
+          -i ${config.CODE_BASE_PATH}/aws_ec2.yml
         """
     }
 
