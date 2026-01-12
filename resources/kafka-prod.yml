@@ -1,4 +1,4 @@
-SLACK_CHANNEL_NAME: "build-status"
+SLACK_CHANNEL_NAME: "#jenkins_build"
 ENVIRONMENT: "prod"
 CODE_BASE_PATH: "ansible-src/Assignment5"
 ACTION_MESSAGE: "Kafka deployment started"
