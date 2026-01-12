@@ -35,8 +35,19 @@ def call(Map args = [:]) {
 
     stage('Slack Notification') {
         slackSend(
-            channel: config.SLACK_CHANNEL_NAME,
-            message: "SUCCESS: ${config.ACTION_MESSAGE}"
-        )
+        channel: config.SLACK_CHANNEL_NAME,
+        color: currentBuild.currentResult == 'SUCCESS' ? 'good' : 'danger',
+        message: """
+Kafka Deployment Completed
+
+Job: ${env.JOB_NAME}
+Build #: ${env.BUILD_NUMBER}
+Environment: ${config.ENVIRONMENT}
+Result: ${currentBuild.currentResult}
+
+Build URL:
+${env.BUILD_URL}
+"""
+    )
     }
 }
