@@ -1,5 +1,5 @@
 SLACK_CHANNEL_NAME: "build-status"
 ENVIRONMENT: "prod"
-CODE_BASE_PATH: "Assignment5"
+CODE_BASE_PATH: "ansible-src/Assignment5"
 ACTION_MESSAGE: "Kafka deployment started"
 KEEP_APPROVAL_STAGE: true
