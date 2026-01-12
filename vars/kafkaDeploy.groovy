@@ -11,7 +11,7 @@ def call(Map args = [:]) {
         echo "Cloning Kafka code..."
         git branch: 'Priyanshunegi_ansible',
             url: 'https://github.com/OT-MyGurukulam/Ansible_33.git'
-            credentialsId: 'priyansh261'
+            credentialsId: 'github-creds'
     }
 
     if (config.KEEP_APPROVAL_STAGE == true) {
