@@ -11,8 +11,8 @@ def call(Map args = [:]) {
             stage('Clone Repo') {
                 steps {
                     echo "Cloning Kafka code..."
-                    git branch: 'main',
-                        url: 'https://github.com/your-org/kafka-ansible.git'
+                    git branch: 'Priyanshunegi_ansible',
+                        url: 'https://github.com/OT-MyGurukulam/Ansible_33.git'
                 }
             }
 
@@ -30,7 +30,7 @@ def call(Map args = [:]) {
                     echo "Running Ansible for Kafka..."
                     sh """
                     ansible-playbook \
-                      ${config.CODE_BASE_PATH}/kafka.yml \
+                      ${config.CODE_BASE_PATH}/site.yml \
                       -i ${config.CODE_BASE_PATH}/inventory
                     """
                 }
