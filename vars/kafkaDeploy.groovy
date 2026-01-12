@@ -8,6 +8,8 @@ def call(Map args = [:]) {
     }
 
     stage('Clone Repo') {
+
+        deleteDir()
         echo "Cloning Kafka code..."
         git branch: 'Priyanshunegi_ansible',
             url: 'https://github.com/OT-MyGurukulam/Ansible_33.git'
