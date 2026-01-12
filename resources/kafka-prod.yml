@@ -1,5 +1,5 @@
 SLACK_CHANNEL_NAME: "build-status"
 ENVIRONMENT: "prod"
-CODE_BASE_PATH: "env/prod"
+CODE_BASE_PATH: "Assignment5"
 ACTION_MESSAGE: "Kafka deployment started"
 KEEP_APPROVAL_STAGE: true
