@@ -8,13 +8,15 @@ def call(Map args = [:]) {
     }
 
     stage('Clone Repo') {
+    echo "Cloning Kafka code..."
 
-        deleteDir()
-        echo "Cloning Kafka code..."
+    dir('ansible-src') {
         git branch: 'Priyanshunegi_ansible',
-            url: 'https://github.com/OT-MyGurukulam/Ansible_33.git'
+            url: 'https://github.com/OT-MyGurukulam/Ansible_33.git',
             credentialsId: 'github-creds'
     }
+}
+
 
     if (config.KEEP_APPROVAL_STAGE == true) {
         stage('User Approval') {
