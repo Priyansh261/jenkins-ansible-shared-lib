@@ -30,7 +30,7 @@ def call(Map args = [:]) {
         ansible-playbook \
           ${config.CODE_BASE_PATH}/site.yml \
           -i ${config.CODE_BASE_PATH}/aws_ec2.yml \
-          --private-key=/var/lib/jenkins/new_key.pem
+          --private-key=/home/jenkins/new_key.pem
         """
     }
 
