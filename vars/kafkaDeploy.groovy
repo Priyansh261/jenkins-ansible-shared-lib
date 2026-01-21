@@ -28,7 +28,7 @@ def call(Map args = [:]) {
         echo "Running Ansible for Kafka..."
         sh """
         ansible-playbook \
-          -u ec2-user \
+          -u ubuntu \
           ${config.CODE_BASE_PATH}/site.yml \
           -i ${config.CODE_BASE_PATH}/aws_ec2.yml \
           --private-key=/home/jenkins/new_key.pem
